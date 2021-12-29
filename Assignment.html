@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body onload="Greet()">
+
+<h1>Javascript number guesser</h1>
+
+<script>
+const Greet = () => {
+    let name = prompt("Welcome! What is your name?", "");
+    alert("Hey " + name);
+    const random = Math.floor(Math.random() * 25) + 1;
+
+let number = parseInt(prompt('Guess a number from 1 to 25 to start guessing...'));
+
+while(number !== random) {
+    alert("Unfortunately, that is not correct!");
+    number = parseInt(prompt('Guess again:'));
+}
+
+if(number == random) {
+    alert("Congratulations, you have won the game!");
+}
+alert("Bye " + name + ",See you");
+}
+</script>
+
+</body>
+</html>
